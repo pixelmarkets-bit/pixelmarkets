@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>PixelMarket — Pasang Iklanmu</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233b;--text:#eef3ff;--muted:#9ba9c7;--line:#293653;--accent:#70f0c0;--accent2:#7aa7ff;--yellow:#ffd166}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0%,#172544 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+a{color:var(--accent)}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:12px}.brand{font-weight:900;font-size:1.25rem;letter-spacing:-.5px}.brand span{color:var(--accent)}.tag{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 10px}
+.hero{padding:42px 0 26px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:1.5px}.hero h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.02;letter-spacing:-2px;margin:12px 0}.hero p{color:var(--muted);max-width:650px}.hero-card,.panel{background:linear-gradient(145deg,#17223a,#101727);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 50px #0002}.bigprice{font-size:2rem;font-weight:900;color:var(--accent)}.small{font-size:.86rem;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:12px;padding:12px 17px;font-weight:800;cursor:pointer;transition:.15s}.btn-primary{background:var(--accent);color:#082018}.btn-secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}.section{padding:24px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px}.section h2{margin:0;font-size:1.6rem}.muted{color:var(--muted)}.stats{display:flex;gap:10px;flex-wrap:wrap}.stat{background:var(--panel);border:1px solid var(--line);padding:9px 12px;border-radius:12px;font-size:.9rem}.stat strong{color:var(--accent)}.board-shell{background:#0a0f1d;border:1px solid var(--line);padding:10px;border-radius:18px;overflow:hidden}.board{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:3px}.tile{aspect-ratio:1;border:1px solid #34435e;background:#18243a;border-radius:3px;min-width:0;padding:0;cursor:pointer;position:relative;transition:background .1s,border .1s}.tile:hover{border-color:var(--accent2);background:#273b5c}.tile.selected{background:var(--accent);border-color:#c0ffe8;box-shadow:0 0 0 1px #70f0c055}.tile:focus-visible{outline:2px solid white;outline-offset:2px}.board-help{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:.83rem;color:var(--muted)}.legend{display:flex;gap:12px;flex-wrap:wrap}.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;background:#18243a;border:1px solid #34435e}.dot.sel{background:var(--accent)}.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-size:.9rem;font-weight:700}.field input,.field textarea{width:100%;background:#0b1222;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}.field input:focus,.field textarea:focus{outline:2px solid #70f0c055;border-color:var(--accent)}.field input[type=file]{padding:9px}.total{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#0b1222;border:1px solid var(--line);border-radius:14px;margin:15px 0}.total strong{font-size:1.45rem;color:var(--accent)}.notice{font-size:.84rem;color:var(--muted);background:#101a2c;border-left:3px solid var(--yellow);padding:12px 14px;border-radius:8px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{padding:16px;border-radius:15px;background:var(--panel);border:1px solid var(--line)}.step b{display:block;margin-bottom:5px}.step span{color:var(--muted);font-size:.9rem}.footer{border-top:1px solid var(--line);margin-top:30px;padding:25px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:25px}.hero h1{letter-spacing:-1.3px}.order-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.tile{border-radius:2px}.board{gap:2px}.board-shell{padding:6px}.section-head{align-items:start;flex-direction:column}.hero-card{padding:18px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <div class="brand">▦ <span>Pixel</span>Market</div>
+  <div class="tag">Papan iklan digital</div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Ruang kecil, peluang besar</div>
+      <h1>Taruh brand kamu di <span style="color:var(--accent)">papan pixel.</span></h1>
+      <p>Pilih kotak yang masih kosong, kirim detail iklan, dan ajukan pesanan. Cocok untuk kreator, komunitas, toko online, dan UMKM.</p>
+      <a class="btn btn-primary" href="#papan">Pilih pixel ↘</a>
+      <a class="btn btn-secondary" href="#cara" style="margin-left:6px">Cara kerja</a>
+    </div>
+    <div class="hero-card">
+      <div class="small">Harga per kotak</div>
+      <div class="bigprice" id="priceHero">Rp10.000</div>
+      <div class="small">Tayang selama 30 hari setelah pesanan dikonfirmasi.</div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+      <div style="display:flex;justify-content:space-between;gap:10px"><span class="muted">Ukuran papan</span><b>20 × 20 kotak</b></div>
+      <div style="display:flex;justify-content:space-between;gap:10px;margin-top:8px"><span class="muted">Total kotak</span><b>400</b></div>
+      <div style="display:flex;justify-content:space-between;gap:10px;margin-top:8px"><span class="muted">Pemesanan</span><b>Manual via WhatsApp</b></div>
+    </div>
+  </section>
+
+  <section class="section" id="papan">
+    <div class="section-head">
+      <div><div class="eyebrow">01 / Pilih area</div><h2>Papan pixel</h2><div class="muted">Ketuk kotak untuk memilihnya. Pilih beberapa kotak jika butuh area lebih luas.</div></div>
+      <div class="stats"><div class="stat">Dipilih: <strong id="count">0</strong></div><div class="stat">Total: <strong id="boardTotal">Rp0</strong></div></div>
+    </div>
+    <div class="board-shell"><div class="board" id="board" aria-label="Papan pemilihan pixel"></div></div>
+    <div class="board-help"><div class="legend"><span><i class="dot"></i>Kosong</span><span><i class="dot sel"></i>Pilihanmu</span></div><span>Nomor kotak akan masuk ke pesan pesanan.</span></div>
+  </section>
+
+  <section class="section" id="pesan">
+    <div class="section-head"><div><div class="eyebrow">02 / Detail pesanan</div><h2>Ajukan iklan</h2></div></div>
+    <div class="order-grid">
+      <div class="panel">
+        <form id="orderForm">
+          <div class="field"><label for="buyer">Nama / nama brand *</label><input id="buyer" required maxlength="70" placeholder="Contoh: TokoKeren"></div>
+          <div class="field"><label for="url">Link tujuan iklan *</label><input id="url" required type="url" placeholder="https://contoh.com"></div>
+          <div class="field"><label for="contact">Kontak WhatsApp kamu *</label><input id="contact" required inputmode="tel" maxlength="25" placeholder="Contoh: 08xxxxxxxxxx"></div>
+          <div class="field"><label for="logo">File logo (opsional)</label><input id="logo" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><div class="small">File tidak diunggah otomatis. Kirim file logo langsung di WhatsApp setelah pesan terbuka.</div></div>
+          <div class="field"><label for="notes">Catatan (opsional)</label><textarea id="notes" rows="3" maxlength="400" placeholder="Warna pilihan, nama akun, atau pesan tambahan"></textarea></div>
+          <div class="total"><div><div class="small">Estimasi biaya</div><div class="small" id="summary">Belum ada pixel dipilih</div></div><strong id="total">Rp0</strong></div>
+          <button class="btn btn-primary" type="submit" style="width:100%">Kirim pesanan via WhatsApp ↗</button>
+          <p class="small">Dengan mengirim pesanan, kamu mengajukan permintaan pemesanan. Area baru dianggap terpesan setelah admin mengonfirmasi ketersediaan dan pembayaran.</p>
+        </form>
+      </div>
+      <aside class="panel">
+        <h3 style="margin-top:0">Sebelum memesan</h3>
+        <p class="muted">Pastikan link tujuan benar dan logo milikmu atau kamu punya izin untuk menggunakannya.</p>
+        <div class="notice">Harga di halaman ini adalah contoh awal yang bisa kamu ubah. Jangan menyebut iklan sudah aktif sebelum pembayaran dan penempatan benar-benar dikonfirmasi.</div>
+        <h3>Tips supaya laku</h3>
+        <ul class="muted" style="padding-left:20px">
+          <li>Tawarkan harga perkenalan kepada 5–10 UMKM atau kreator.</li>
+          <li>Tampilkan contoh logo dan tautan yang benar-benar sudah mendapat izin.</li>
+          <li>Terangkan durasi tayang dan aturan konten sebelum menerima pembayaran.</li>
+          <li>Catat pesanan dan kotak yang sudah dibayar di spreadsheet.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="cara">
+    <div class="section-head"><div><div class="eyebrow">03 / Alur pemesanan</div><h2>Gampang, tiga langkah</h2></div></div>
+    <div class="steps">
+      <div class="step"><b>1. Pilih kotak</b><span>Ketuk satu atau beberapa kotak di papan pixel.</span></div>
+      <div class="step"><b>2. Kirim detail</b><span>Isi nama brand, link, kontak, lalu buka WhatsApp.</span></div>
+      <div class="step"><b>3. Konfirmasi admin</b><span>Admin mengecek ketersediaan, menerima pembayaran, lalu memasang iklan.</span></div>
+    </div>
+  </section>
+</main>
+<footer class="wrap footer"><span>© <span id="year"></span> PixelMarket — proyek iklan pixel independen.</span><span>Kontak admin: atur nomor WhatsApp di kode website.</span></footer>
+<script>
+/* ===== PENGATURAN PEMILIK WEBSITE =====
+   1. Ganti nomor di bawah dengan nomor WhatsApp admin.
+   2. Pakai format internasional tanpa tanda +, spasi, atau strip.
+      Contoh Indonesia: 6281234567890
+   3. Ubah harga per kotak sesuai strategi harga kamu.
+*/
+const ADMIN_WHATSAPP = "6281234567890";
+const PRICE_PER_TILE = 10000;
+const GRID_SIZE = 20;
+
+const board = document.getElementById("board");
+const chosen = new Set();
+const money = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n);
+document.getElementById("priceHero").textContent = money(PRICE_PER_TILE);
+document.getElementById("year").textContent = new Date().getFullYear();
+
+for(let row=1; row<=GRID_SIZE; row++){
+  for(let col=1; col<=GRID_SIZE; col++){
+    const id = `R${String(row).padStart(2,"0")}-C${String(col).padStart(2,"0")}`;
+    const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = "tile";
+    tile.title = `${id} — klik untuk memilih`;
+    tile.setAttribute("aria-label", `${id}, kosong`);
+    tile.setAttribute("aria-pressed","false");
+    tile.addEventListener("click",()=>{
+      if(chosen.has(id)){chosen.delete(id);tile.classList.remove("selected");tile.setAttribute("aria-pressed","false");}
+      else{chosen.add(id);tile.classList.add("selected");tile.setAttribute("aria-pressed","true");}
+      updateTotal();
+    });
+    board.appendChild(tile);
+  }
+}
+function updateTotal(){
+  const count = chosen.size;
+  const total = count * PRICE_PER_TILE;
+  document.getElementById("count").textContent = count;
+  document.getElementById("boardTotal").textContent = money(total);
+  document.getElementById("total").textContent = money(total);
+  document.getElementById("summary").textContent = count ? `${count} kotak × ${money(PRICE_PER_TILE)}` : "Belum ada pixel dipilih";
+}
+document.getElementById("orderForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(chosen.size===0){alert("Pilih minimal satu kotak di papan pixel dulu.");document.getElementById("papan").scrollIntoView({behavior:"smooth"});return;}
+  if(ADMIN_WHATSAPP==="6281234567890"){
+    const ok = confirm("Nomor admin masih contoh. Pesan akan tetap dibuat, tetapi kamu harus mengganti ADMIN_WHATSAPP di kode sebelum website dipublikasikan. Lanjut?");
+    if(!ok)return;
+  }
+  const buyer = document.getElementById("buyer").value.trim();
+  const url = document.getElementById("url").value.trim();
+  const contact = document.getElementById("contact").value.trim();
+  const notes = document.getElementById("notes").value.trim() || "-";
+  const logo = document.getElementById("logo").files[0];
+  const cells = [...chosen].sort().join(", ");
+  const msg = [
+    "Halo admin PixelMarket, saya ingin mengajukan pesanan iklan.",
+    "",
+    `Nama/brand: ${buyer}`,
+    `Link tujuan: ${url}`,
+    `Kontak pemesan: ${contact}`,
+    `Pixel yang dipilih (${chosen.size} kotak): ${cells}`,
+    `Estimasi total: ${money(chosen.size*PRICE_PER_TILE)}`,
+    `Catatan: ${notes}`,
+    `File logo: ${logo ? logo.name+" (akan saya kirim sebagai lampiran terpisah)" : "Belum ada"}`,
+    "",
+    "Mohon konfirmasi apakah area masih tersedia dan cara pembayarannya. Terima kasih."
+  ].join("\n");
+  const waUrl = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  window.open(waUrl,"_blank","noopener,noreferrer");
+});
+</script>
+</body>
+</html>
